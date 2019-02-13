@@ -10,8 +10,8 @@ before_install:
   - pip install -r install_requires.txt
 
 script:
-  - make install
-  - make docs
+  - make scripts/mini_align binaries
+  - MEDAKA_BINARIES=1 python setup.py install 
 
 deploy:
   provider: pages
